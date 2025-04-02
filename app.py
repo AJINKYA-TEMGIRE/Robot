@@ -7,6 +7,10 @@ from PIL import Image
 
 import time
 
+# Disable CORS and XSRF protection
+st.set_option('server.enableCORS', False)
+st.set_option('server.enableXsrfProtection', False)
+
 # Load pre-trained YOLOv8 model
 model = YOLO("yolov8n.pt")  # Detects 80 common objects
 
